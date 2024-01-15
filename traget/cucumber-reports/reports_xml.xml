@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.69">
+    <testcase classname="Login" name="Successful Login with valid input" time="4.398">
+        <failure message="Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.&#10;  (session not created: DevToolsActivePort file doesn't exist)&#10;  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.) &#10;Host info: host: 'MSI', ip: '192.168.1.44'&#10;Build info: version: '4.15.0', revision: '1d14b5521b'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]" type="org.openqa.selenium.SessionNotCreatedException"><![CDATA[Given user launch Chrome browser............................................failed
+When user open Url "https://practicetestautomation.com/practice-test-login/".skipped
+And user enter username "student" and password as "Password123".............skipped
+And click on submit_button..................................................skipped
+Then Page title should be "Logged In Successfully/practice Test Automation".skipped
+When User click on logout button............................................skipped
+And close browser...........................................................skipped
+
+StackTrace:
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: Chrome failed to start: exited normally.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
+Host info: host: 'MSI', ip: '192.168.1.44'
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:89)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+	at StepDefinitionFile.StepDefinitionClass.user_launch_chrome_browser(StepDefinitionClass.java:23)
+	at ✽.user launch Chrome browser(file:///C:/Users/user/eclipse-workspace/BDD12/Features/Test.feature:4)
+]]></failure>
+    </testcase>
+</testsuite>
